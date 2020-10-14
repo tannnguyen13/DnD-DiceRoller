@@ -14,13 +14,12 @@ win.title("Dungeons & Dragons Dice Roller")
 mainFrame = tk.Frame(win)
 mainFrame.pack()
 
-rollSection = tk.Frame(win)
+rollSection = tk.Listbox(win)
 rollSection.pack()
 
 
 def roll(dice):
-    rolld = random.randint(1, dice)
-    dicelabel = tk.Label(rollSection, text=("You rolled a " + str(rolld)))
+    dicelabel = tk.Label(rollSection, text=("You rolled a " + str(random.randint(1, dice))))
     dicelabel.pack()
 
 
